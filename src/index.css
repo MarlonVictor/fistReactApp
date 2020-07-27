@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --darkRed: #df0611;
+  --lightRed: #f40612;
+  --darkGray: #040404;
+  --lightGray: #303030;
+  --fontGray: #737373;
+  --white: #E8F0FE;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+} 
