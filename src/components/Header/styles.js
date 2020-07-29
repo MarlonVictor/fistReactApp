@@ -1,23 +1,24 @@
 import styled from 'styled-components'
 
-// const menuArea = document.querySelector('nav')
-// const body     = document.querySelector('body')
-// 'linear-gradient(360deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%)'
-
-function scrollAnimate() {
-    if(document.documentElement.scrollTop > 10) {
-        console.log('foi');
-        
-    }
-}
-scrollAnimate()
-
 export const HeaderStyle = styled.header`
     display: flex;
     align-items: center;
     position: fixed;
     width: 100%;
     z-index: 999;
+
+    &.scrolled {
+        background: #040404;
+    }
+
+    @media(max-width: 500px) {
+        flex-direction: column;
+
+        .headerLinks {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
 
     a {
         text-decoration: none;
@@ -30,11 +31,20 @@ export const HeaderStyle = styled.header`
         &:hover {
             color: var(--white);
             cursor: pointer;
-        } 
+        }
+
+        @media(max-width: 500px) {
+            padding: 0 5px;
+        }
     }
 `
 
 export const Logo = styled.img`
     width: 250px;
     padding: 20px 35px 20px 60px;
+
+    @media(max-width: 500px) {
+        width: 180px;
+        padding: 5px 0 0;
+    }
 ` 

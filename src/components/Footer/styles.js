@@ -9,6 +9,11 @@ export const FooterBase = styled.footer`
   font-weight: lighter;
   font-size: 16px;
   position: relative;
+
+  @media(max-width: 855px) {
+    padding: 30px 50px;
+    text-align: center;
+  }
 `;
 
 export const FooterLinks = styled.div`
@@ -24,7 +29,16 @@ export const FooterLinks = styled.div`
       color: var(--white)
     }
   }
-  
+
+  @media(max-width: 855px) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    a {
+      margin-left: 10px;
+    }
+  }
 `
 
 export const FooterSelect = styled.select`
@@ -33,4 +47,8 @@ export const FooterSelect = styled.select`
   border-radius: 5px;
   background-color: #000;
   color: var(--fontGray);
+
+  @media(max-width: 855px) {
+    margin-top: 10px;
+  }
 `

@@ -6,7 +6,7 @@ import Carousel from '../../components/Carousel';
 import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
 
-function Home() {
+const Home = () => {
   return (
     <>
       <Header>

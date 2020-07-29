@@ -5,6 +5,13 @@ export const VideoContainer = styled.div`
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%;
+  padding-left: 10px;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(2, -3, 1, 0.3);
+    transform: translate(-3px, -3px);
+    transition: .2s linear;
+  }
   @media (max-width: 800px) {
     display: none;
   }
