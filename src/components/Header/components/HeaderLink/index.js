@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from './styles';
+import { Link } from 'react-router-dom'
 
-const HeaderLink = props => {
+const HeaderLink = ({children}) => {
   return (
     <nav className="headerLinks">
-      <Link>Home</Link>
-      <Link href={props.href}>{props.children}</Link>
+      <Link>{children}</Link>
     </nav>
   )
 }
