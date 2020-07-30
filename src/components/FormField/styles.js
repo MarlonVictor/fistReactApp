@@ -11,8 +11,8 @@ export const FormContainer = styled.div`
 export const Label = styled.label``
 
 Label.Text = styled.span`
-  color: #E5E5E5;
-  height: 57px;
+  color: color: var(--lightGray);
+  height: 55px;
   position: absolute; 
   top: 0;
   left: 16px;
@@ -21,7 +21,7 @@ Label.Text = styled.span`
   align-items: center;
 
   transform-origin: 0% 0%;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 300;
 
@@ -29,27 +29,29 @@ Label.Text = styled.span`
 `
 
 export const Input = styled.input`
-  background: #53585D;
-  color: #F5F5F5;
+  background: #fff;
+  color: var(--lightGray);
   display: block;
-  width: 100%;
-  height: 57px;
-  font-size: 18px;
+  max-width: 100%;
+  width: 700px;
+  height: 55px;
+  font-size: 16px;
   
   outline: 0;
-  border: 0;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid #53585D;
+  border: 1.5px solid var(--fontGray);
   
-  padding: 16px 16px;
-  margin-bottom: 45px;
+  padding: 10px 16px 5px;
+  margin-bottom: 20px;
   
   resize: none;
   border-radius: 4px;
   transition: border-color .3s;
   
+  &[type='color'] {
+    padding: 30px 16px 5px;
+  }
   &:focus {
-    border-bottom-color: var(--darkGray);
+    border-color: #0d6efd;
   }
   &:focus:not([type='color']) + ${Label.Text} {
     transform: scale(.6) translateY(-10px);
@@ -60,7 +62,7 @@ export const Input = styled.input`
         &:not([type='color']) + ${Label.Text} {
           transform: scale(.6) translateY(-10px);
         }
-      `
-    }
+      `;
   }
+}
 `

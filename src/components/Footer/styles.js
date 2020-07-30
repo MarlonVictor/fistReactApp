@@ -1,7 +1,20 @@
 import styled from 'styled-components';
 
+const bgColor = type => {
+  if(type === 'light') {
+    return `
+      background-color: var(--white);
+    `
+    
+  }else {
+    return `
+      background-color: var(--darkGray);
+    `
+  }
+}
+
 export const FooterBase = styled.footer`
-  background-color: var(--white);
+  background-color: var(--darkGray);
   height: 240px;
   color: var(--lightGray);
   padding: 30px 250px;
@@ -10,7 +23,7 @@ export const FooterBase = styled.footer`
   position: relative;
 
   @media(max-width: 855px) {
-    padding: 30px 50px;
+    padding: 30px 50px 40px;
     text-align: center;
   }
 `;
@@ -46,7 +59,6 @@ export const FooterSelect = styled.select`
   border-radius: 5px;
   background-color: transparent;
   color: var(--lightGray);
-
   @media(max-width: 855px) {
     margin-top: 10px;
   }

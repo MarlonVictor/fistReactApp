@@ -16,7 +16,6 @@ const Footer = () => {
             <option value="pt" defaultValue>Português</option>
             <option value="us">English</option>
       </FooterSelect>
-
     </FooterBase>
   )
 }
