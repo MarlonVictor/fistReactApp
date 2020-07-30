@@ -1,16 +1,19 @@
-import React from "react";
+import React from "react"
+import { FormContainer, Label, Input } from './styles'
 
-const FormField = ({ placeholder, type, name, value, onChange }) => {
+const FormField = ({ label, type, name, value, onChange }) => {
   return (
-    <div>
-        <input
-          placeholder={placeholder}
-          type={type}
-          value={value}
-          name={name}
-          onChange={onChange}
-        />
-    </div>
+    <FormContainer>
+        <Label> 
+          <Input
+            type={type}
+            value={value}
+            name={name}
+            onChange={onChange}
+          />
+          <Label.Text>{label}</Label.Text>
+        </Label>
+    </FormContainer>
   )
 }
 

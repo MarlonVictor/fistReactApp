@@ -23,7 +23,8 @@ a {
 } 
 
 main {
-  color: var(--white);
+  background-color: var(--white);
+  border-bottom: 1px solid var(--fontGray);
   min-height: 100vh;
   padding: 100px 50px 0px;
 }

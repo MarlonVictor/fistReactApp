@@ -1,0 +1,29 @@
+{
+    "categorias": [
+      {
+        "id": 1,
+        "titulo": "Front End",
+        "cor": "#00C86F"
+      },
+      {
+        "id": 2,
+        "titulo": "ReactJs",
+        "cor": "#6BD1FF"
+      },
+      {
+        "id": 3,
+        "titulo": "Sobre Tecnologia",
+        "cor": "#6b5be2"
+      },
+      {
+        "id": 4,
+        "titulo": "Entretenimento",
+        "cor": "red"
+      },
+      {
+        "id": 5,
+        "titulo": "Filmes / Séries",
+        "cor": "orange"
+      }
+    ]
+}

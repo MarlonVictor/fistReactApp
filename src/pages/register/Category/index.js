@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../../../components/Header'
 import { Link } from 'react-router-dom'
 import Footer from '../../../components/Footer'
@@ -38,6 +38,17 @@ const CategoryPage = () => {
         )
     }
 
+    useEffect(() => {
+        console.log('alo') // Só roda o log quando oque está no array for true
+        const URL = 'http://localhost:8080/categorias'
+
+        fetch(URL)
+            .then(async (res) => {
+                const resposta = await res.json()
+                setCategories([...resposta])
+            })    
+    }, [])
+
 
     return (
         <>
@@ -47,11 +58,12 @@ const CategoryPage = () => {
             </Header>
             
             <main>
-                <h1>Cadastro de Categoria: {values.name}</h1>
+                <h1>Cadastro de Categoria:</h1>
+                <p>{values.name}</p>
 
                 <form onSubmit={handleSubmit}>
                     <FormField
-                        placeholder="Nome da Categoria"
+                        label="Nome da Categoria"
                         type="text"
                         name="name"
                         value={values.name}
@@ -59,7 +71,7 @@ const CategoryPage = () => {
                     />
 
                     <FormField
-                        placeholder="Cor da Categoria"
+                        label="Cor"
                         type="color"
                         name="color"
                         value={values.color}
@@ -73,7 +85,7 @@ const CategoryPage = () => {
                     {categories.map((category, index) => {
                         return (
                             <li key={`${category}${index}`}>
-                                {category.name}{category.color}
+                                {category.titulo}
                             </li>
                         )
                     })}

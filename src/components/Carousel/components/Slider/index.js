@@ -1,6 +1,6 @@
-import React from 'react';
-import SlickSlider from 'react-slick';
-import styled from 'styled-components';
+import React from 'react'
+import SlickSlider from 'react-slick'
+import styled from 'styled-components'
 
 const Container = styled.ul`
   padding: 0;
@@ -25,7 +25,7 @@ const Container = styled.ul`
   .slick-next {
     right: 16px;
   }
-`;
+`
 
 export const SliderItem = styled.li`
   margin-right: 16px;
@@ -35,7 +35,7 @@ export const SliderItem = styled.li`
     height: 197px;
     object-fit: cover;
   }
-`;
+`
 
 
 const Slider = ({ children }) => (
@@ -52,6 +52,6 @@ const Slider = ({ children }) => (
       {children}
     </SlickSlider>
   </Container>
-);
+)
 
-export default Slider; 
+export default Slider
