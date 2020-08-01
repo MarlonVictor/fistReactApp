@@ -1,9 +1,10 @@
-import React from 'react';
-import { FooterBase, FooterLinks, FooterSelect } from './styles';
+import React from 'react'
+import styled, {css} from 'styled-components'
+import { FooterLinks, FooterSelect } from './styles'
 
-const Footer = () => {
+const FooterComponent = ({className}) => {
   return (
-    <FooterBase>
+    <footer className={className}>
       <p>Se gostar do projeto, me siga nas redes sociais ;)</p>
 
       <FooterLinks>
@@ -13,11 +14,35 @@ const Footer = () => {
       </FooterLinks>
 
       <FooterSelect>
-            <option value="pt" defaultValue>Português</option>
-            <option value="us">English</option>
+        <option value="pt" defaultValue>Português</option>
+        <option value="us">English</option>
       </FooterSelect>
-    </FooterBase>
+    </footer>
   )
 }
+
+const Footer = styled(FooterComponent)`
+  margin-top: 80px;
+  background-color: var(--darkGray);
+  height: 240px;
+  color: var(--lightGray);
+  padding: 30px 250px;
+  font-weight: lighter;
+  font-size: 16px;
+  position: relative;
+
+  &.light {
+    background-color: var(--white);
+  }
+
+  @media(max-width: 855px) {
+    padding: 30px 50px 40px;
+    text-align: center;
+  }
+  ${props => props.bg === 'light' && css`
+    background-color: var(--white);
+    margin-top: 0;
+  `}
+`
 
 export default Footer

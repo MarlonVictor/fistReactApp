@@ -1,33 +1,5 @@
 import styled from 'styled-components';
 
-const bgColor = type => {
-  if(type === 'light') {
-    return `
-      background-color: var(--white);
-    `
-    
-  }else {
-    return `
-      background-color: var(--darkGray);
-    `
-  }
-}
-
-export const FooterBase = styled.footer`
-  background-color: var(--darkGray);
-  height: 240px;
-  color: var(--lightGray);
-  padding: 30px 250px;
-  font-weight: lighter;
-  font-size: 16px;
-  position: relative;
-
-  @media(max-width: 855px) {
-    padding: 30px 50px 40px;
-    text-align: center;
-  }
-`;
-
 export const FooterLinks = styled.div`
   padding: 30px 0;
   position: absolute;

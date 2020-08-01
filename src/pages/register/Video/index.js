@@ -28,7 +28,7 @@ function CadastroVideo() {
 
     return (
         <>
-            <Header>
+            <Header bg='dark'>
                 <Link to='/'>Home</Link>
                 <Link to='/register/category'>Nova Categoria</Link>
             </Header>
@@ -80,7 +80,7 @@ function CadastroVideo() {
                 </form>
             </main>
     
-            <Footer/>
+            <Footer bg='light'/>
         </>
     )
 }

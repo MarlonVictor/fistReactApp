@@ -1,36 +1,5 @@
 import styled from 'styled-components'
 
-export const HeaderStyle = styled.header`
-    background: linear-gradient(360deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
-    display: flex;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-
-    @media(max-width: 500px) {
-        flex-direction: column;
-    }
-
-    a {
-        text-decoration: none;
-        padding-left: 30px;
-        font-size: 17px;
-        font-weight: 600;
-        color: #ccc;
-        transition: .2s;
-        
-        &:hover {
-            color: var(--white);
-            cursor: pointer;
-        }
-
-        @media(max-width: 500px) {
-            padding: 0 5px;
-        }
-    }
-`
-
 export const Links = styled.nav`
     @media(max-width: 500px) {
         display: flex;

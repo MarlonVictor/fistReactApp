@@ -31,7 +31,7 @@ const CadastroCategoria = () => {
 
     return (
         <>
-            <Header>
+            <Header bg='dark'>
                 <Link to='/'>Home</Link>
                 <Link to='/register/video'>Novo Video</Link>
             </Header>
@@ -77,7 +77,7 @@ const CadastroCategoria = () => {
                 </CategoryList>
             </main>
 
-            <Footer/>
+            <Footer bg='light'/>
         </>
     )
 }
