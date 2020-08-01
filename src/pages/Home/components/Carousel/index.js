@@ -1,15 +1,15 @@
-import React from 'react';
-import { VideoCardGroupContainer, Title } from './styles';
-import VideoCard from './components/VideoCard';
-import Slider, { SliderItem } from './components/Slider';
+import React from 'react'
+import { VideoCardGroupContainer, Title } from './styles'
+import VideoCard from './components/VideoCard'
+import Slider, { SliderItem } from './components/Slider'
 
 function Carousel({
   ignoreFirstVideo,
   category,
 }) {
-  const categoryTitle = category.titulo;
-  const categoryColor = category.cor;
-  const videos = category.videos;
+  const categoryTitle = category.titulo
+  const categoryColor = category.cor
+  const {videos} = category
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
@@ -22,7 +22,7 @@ function Carousel({
       <Slider>
         {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
-            return null;
+            return null
           }
 
           return (
@@ -33,11 +33,11 @@ function Carousel({
                 categoryColor={categoryColor}
               />
             </SliderItem>
-          );
+          )
         })}
       </Slider>
     </VideoCardGroupContainer>
-  );
+  )
 }
 
-export default Carousel;
+export default Carousel

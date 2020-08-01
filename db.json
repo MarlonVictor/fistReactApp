@@ -1,29 +1,241 @@
 {
-    "categorias": [
-      {
-        "id": 1,
-        "titulo": "Front End",
-        "cor": "#00C86F"
-      },
-      {
-        "id": 2,
-        "titulo": "ReactJs",
-        "cor": "#6BD1FF"
-      },
-      {
-        "id": 3,
-        "titulo": "Sobre Tecnologia",
-        "cor": "#6b5be2"
-      },
-      {
-        "id": 4,
-        "titulo": "Entretenimento",
-        "cor": "red"
-      },
-      {
-        "id": 5,
-        "titulo": "Filmes / Séries",
-        "cor": "orange"
-      }
-    ]
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "ReactJs",
+      "cor": "#6BD1FF"
+    },
+    {
+      "id": 2,
+      "titulo": "Sobre Tecnologia",
+      "cor": "#6b5be2"
+    },
+    {
+      "id": 3,
+      "titulo": "Entretenimento",
+      "cor": "red"
+    },
+    {
+      "id": 4,
+      "titulo": "Filmes / Séries",
+      "cor": "orange"
+    },
+    {
+      "id": 5,
+      "titulo": "Frontend",
+      "cor": "#00C86F"
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "Fazendo um player de vídeo com React ",
+      "url": "https://www.youtube.com/watch?v=ZaYvwn9nBD4&t=5s"
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "Autenticação JWT com Context API e React Router",
+      "url": "https://www.youtube.com/watch?v=AClyxTbfI08&t=657s"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "Learn React JS - Full Course for Beginners",
+      "url": "https://www.youtube.com/watch?v=DLX62G4lc44"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "Twitter Responsivo com ReactJS | UI Clone",
+      "url": "https://www.youtube.com/watch?v=K-8z_4xvT3o"
+    },
+    {
+      "id": 5,
+      "categoriaId": 1,
+      "titulo": "Utilizando Styled Components no ReactJS e React Native",
+      "url": "https://www.youtube.com/watch?v=R3S8DEzEn6s&t=499s"
+    },
+    {
+      "id": 6,
+      "categoriaId": 1,
+      "titulo": "React JS Curso Rápido ?? Masterclass #2 2020",
+      "url": "https://www.youtube.com/watch?v=GJ8Vm-h0V8I"
+    },
+    {
+      "id": 7,
+      "categoriaId": 2,
+      "titulo": "Como estudar melhor?",
+      "url": "https://www.youtube.com/watch?v=Is6c9KSGCbk&feature=youtu.be"
+    },
+    {
+      "id": 8,
+      "categoriaId": 2,
+      "titulo": "Faculdade",
+      "url": "https://www.youtube.com/watch?v=jw06H8esyzQ&feature=youtu.be"
+    },
+    {
+      "id": 9,
+      "categoriaId": 2,
+      "titulo": "Agora Aquela I.A. Foi Longe Demais",
+      "url": "https://www.youtube.com/watch?v=pbVwH8o837A"
+    },
+    {
+      "id": 10,
+      "categoriaId": 2,
+      "titulo": "Intercâmbio para Programadores",
+      "url": "https://www.youtube.com/watch?v=xcxz_PmpZ8w"
+    },
+    {
+      "id": 11,
+      "categoriaId": 2,
+      "titulo": "Os 3 Livros Que Fizeram Eu Não Desistir da Programação",
+      "url": "https://www.youtube.com/watch?v=Uh0Kn2aXEqY"
+    },
+    {
+      "id": 12,
+      "categoriaId": 2,
+      "titulo": "Seja um Programador Melhor: 10 Repositórios SENSACIONAIS no GitHub",
+      "url": "https://www.youtube.com/watch?v=vGQSG_YnTOw"
+    },
+    {
+      "id": 13,
+      "categoriaId": 2,
+      "titulo": "Programador Junior quando posso me considerar um?",
+      "url": "https://www.youtube.com/watch?v=wBbFLgW54x4"
+    },
+    {
+      "id": 14,
+      "categoriaId": 3,
+      "titulo": "Não precisa... - GTA V Corridas Malucas #61",
+      "url": "https://www.youtube.com/watch?v=lo12KSdWydg&t=2058s"
+    },
+    {
+      "id": 15,
+      "categoriaId": 3,
+      "titulo": "FIAT PALIO COM PROBLEMAS NO BICO ?? E CELTA GANHOU FREIO DE MÃO!!",
+      "url": "https://www.youtube.com/watch?v=0PsOTVorq4o"
+    },
+    {
+      "id": 16,
+      "categoriaId": 3,
+      "titulo": "sem risadóla #8",
+      "url": "https://www.youtube.com/watch?v=zkkzI-xemnU"
+    },
+    {
+      "id": 17,
+      "categoriaId": 3,
+      "titulo": "reacTILT | negão da BL, a thread",
+      "url": "https://www.youtube.com/watch?v=jgPDyVHQbRM"
+    },
+    {
+      "id": 18,
+      "categoriaId": 3,
+      "titulo": "FÁBIO GIGA INTIMOU RENATO CARIANI !!!",
+      "url": "https://www.youtube.com/watch?v=zFKJ2iT211M"
+    },
+    {
+      "id": 19,
+      "categoriaId": 3,
+      "titulo": "CHEVETTE SUPERE FICOU A-N-I-M-A-L! ??",
+      "url": "https://www.youtube.com/watch?v=ZFtrTqLho6k"
+    },
+    {
+      "id": 20,
+      "categoriaId": 3,
+      "titulo": "NOVO PROJECT CAR do Coala?? Agora na AUTO SUPER",
+      "url": "https://www.youtube.com/watch?v=QX23baCjFGE"
+    },
+    {
+      "id": 21,
+      "categoriaId": 4,
+      "titulo": "Velozes & Furiosos 9 – Trailer Oficial",
+      "url": "https://www.youtube.com/watch?v=NnDGWyfP7q4"
+    },
+    {
+      "id": 22,
+      "categoriaId": 4,
+      "titulo": "Vikings: Season 6 - Official Clip",
+      "url": "https://www.youtube.com/watch?v=dKf-nmEzecA"
+    },
+    {
+      "id": 23,
+      "categoriaId": 4,
+      "titulo": "The Last Kingdom: Season 3 | Official Trailer",
+      "url": "https://www.youtube.com/watch?v=9Za_bQYuL1w"
+    },
+    {
+      "id": 24,
+      "categoriaId": 4,
+      "titulo": "The Boys Season 2 - Teaser Trailer",
+      "url": "https://www.youtube.com/watch?v=cVHwlqyMyhM"
+    },
+    {
+      "id": 25,
+      "categoriaId": 4,
+      "titulo": "Ragnarok | Trailer oficial | Netflix",
+      "url": "https://www.youtube.com/watch?v=i2qDt5D8RSs"
+    },
+    {
+      "id": 26,
+      "categoriaId": 4,
+      "titulo": "Resgate | Trailer oficial | Netflix",
+      "url": "https://www.youtube.com/watch?v=GMKKq_bYd0E"
+    },
+    {
+      "id": 27,
+      "categoriaId": 5,
+      "titulo": "PERCURSO em NÍVEL em ÁRVORE BINÁRIA | Estruturas de Dados #14",
+      "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM"
+    },
+    {
+      "id": 28,
+      "categoriaId": 5,
+      "titulo": "Navegação em Tabs com JS | Code/Drops #41",
+      "url": "https://www.youtube.com/watch?v=sxPEmuW7aUg"
+    },
+    {
+      "id": 29,
+      "categoriaId": 5,
+      "titulo": "Navegador flutuante com ElectronJS | Code/Drops #30",
+      "url": "https://www.youtube.com/watch?v=zy-B9d2ZVrw"
+    },
+    {
+      "id": 30,
+      "categoriaId": 5,
+      "titulo": "Usar Bootstrap ou criar tudo na Mão? Qual vale mais a pena?",
+      "url": "https://www.youtube.com/watch?v=FDyoaiWMAxA"
+    },
+    {
+      "id": 31,
+      "categoriaId": 5,
+      "titulo": "TUTORIAL SOBRE BOOTSTRAP - CRIE SEUS SITES E SISTEMAS WEB DE FORMA RÁPIDA E DESCOMPLICADA",
+      "url": "https://www.youtube.com/watch?v=F1rQCCeNpwQ"
+    },
+    {
+      "id": 32,
+      "categoriaId": 5,
+      "titulo": "Criando um PWA com React Native & Expo Web | Code/Drops #34",
+      "url": "https://www.youtube.com/watch?v=AqJKAJ0TKms"
+    },
+    {
+      "id": 33,
+      "categoriaId": 5,
+      "titulo": "Exemplo de um Código FUNCIONAL com Composição de Funções!",
+      "url": "https://www.youtube.com/watch?v=Gu7fsv4Lf7E&t=384s"
+    },
+    {
+      "id": 34,
+      "categoriaId": 5,
+      "titulo": "Iniciando com React NATIVE",
+      "url": "https://www.youtube.com/watch?v=XVIKFl4Xa-U"
+    },
+    {
+      "id": 35,
+      "categoriaId": 5,
+      "titulo": "5 Projects You Can Build In A Week That Will Get You Hired",
+      "url": "https://www.youtube.com/watch?v=oluY633rkgI&t=59s"
+    }
+  ]
 }

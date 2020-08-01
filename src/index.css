@@ -9,7 +9,7 @@
   --darkGray: #040404;
   --lightGray: #303030;
   --fontGray: #737373;
-  --white: #E8F0FE;
+  --white: #EEE;
 }
 
 html,
@@ -21,6 +21,13 @@ body {
 a {
   color: inherit;
 } 
+
+aside {
+  font-size: 20px;
+  height: 100vh;
+  color: var(--fontGray);
+  padding: 80px 95px;
+}
 
 main {
   background-color: var(--white);

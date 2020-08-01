@@ -4,53 +4,28 @@ import { Link } from 'react-router-dom'
 import Footer from '../../../components/Footer'
 import FormField from '../../../components/FormField'
 import Button from '../../../components/FormButton'
+import useForm from '../../../hooks/useForm'
 import { CurrentName, Txt, CategoryList, ItenList } from './styled'
 
-const CategoryPage = () => {
-    const initialValues = {
+const CadastroCategoria = () => {
+    const valoresIniciais = {
         name: '',
         color: ''
     }
 
+    const { handleChange, values, clearForm } = useForm(valoresIniciais)
     const [categories, setCategories] = useState([])
 
-    // Atribuindo os valores
-    const [values, setValues] = useState(initialValues)
-
-    function setValue(key, value) {
-        setValues({
-            ...values,
-            [key]: value, // Name: 'valor'
-        })
-    }
-
-    // Submit do formulário
-    function handleSubmit(form) {
-        form.preventDefault()
-
-        setCategories([...categories, values])
-        setValues(initialValues)
-    }
-
-    // Função genérica de onChange
-    function handleChange(input) {
-        setValue(
-            input.target.getAttribute('name'), 
-            input.target.value
-        )
-    }
-
     useEffect(() => {
-        console.log('alo') // Só roda o log quando oque está no array for true
-        const URL = window.location.hostname.includes('localhost') 
-        ? 'http://localhost:8080/categorias'
-        : 'https://reactflix-api.herokuapp.com/categorias'
-
+        const URL = window.location.hostname.includes('localhost')
+          ? 'http://localhost:8080/categorias'
+          : 'https://reactflix-api.herokuapp.com/categorias'
+    
         fetch(URL)
-            .then(async (res) => {
-                const resposta = await res.json()
-                setCategories([...resposta])
-            })    
+          .then(async (respostaDoServidor) => {
+            const resposta = await respostaDoServidor.json()
+            setCategories([...resposta])
+          })
     }, [])
 
 
@@ -64,7 +39,12 @@ const CategoryPage = () => {
             <main>
                 <h1>Cadastro de Categoria: <CurrentName color={values.color}>{values.name}</CurrentName></h1>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={function handleSubmit(infosDoEvento) {
+                    infosDoEvento.preventDefault();
+                    setCategories([ ...categories,values ]);
+
+                    clearForm();
+                }}>
                     <FormField
                         label="Nome da Categoria"
                         type="text"
@@ -89,13 +69,11 @@ const CategoryPage = () => {
 
                 <CategoryList>
                     <p>Categorias já existentes:</p>
-                    {categories.map((category, index) => {
-                        return (
-                            <ItenList key={`${category}${index}`}>
-                                <span></span>{category.titulo}
-                            </ItenList>
-                        )
-                    })}
+                    {categories.map(category => (
+                        <ItenList key={`${category.titulo}`}>
+                            <span></span>{category.titulo}
+                        </ItenList>
+                    ))}
                 </CategoryList>
             </main>
 
@@ -104,4 +82,4 @@ const CategoryPage = () => {
     )
 }
 
-export default CategoryPage
+export default CadastroCategoria
