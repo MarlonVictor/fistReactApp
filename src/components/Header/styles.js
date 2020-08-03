@@ -10,7 +10,7 @@ export const Links = styled.nav`
 
 export const Logo = styled.img`
     width: 250px;
-    padding: 20px 35px 20px 60px;
+    padding: 15px 35px 15px 60px;
 
     @media(max-width: 500px) {
         width: 180px;

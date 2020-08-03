@@ -13,13 +13,12 @@ const HeaderComponent = ({children, className}) => {
 }
 
 const Header = styled(HeaderComponent)`
-    background: linear-gradient(360deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
     display: flex;
     align-items: center;
     position: fixed;
     width: 100%;
     z-index: 999;
-    ${props => props.bg === 'dark' && css`background-color: var(--darkGray);`}
+    background: ${props => props.bg === 'dark' && css`var(--darkGray)` || css`linear-gradient(360deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%)`};
 
     @media(max-width: 500px) {
         flex-direction: column;

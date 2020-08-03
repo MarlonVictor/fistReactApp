@@ -44,6 +44,7 @@ main {
 
 header {
   top: 0;
+  transition: .7s ease-in;
 }
 
 ::-webkit-scrollbar { 
