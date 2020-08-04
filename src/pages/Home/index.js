@@ -41,24 +41,16 @@ const Home = () => {
         if (indice === 0) {
           return (
             <div key={categoria.id}>
-              <BannerMain
-                videoTitle={dadosIniciais[3].videos[1].titulo}
-                url={dadosIniciais[3].videos[1].url}
-                videoDescription={dadosIniciais[3].videos[1].description}
+              <BannerMain videoTitle={dadosIniciais[3].videos[1].titulo} url={dadosIniciais[3].videos[1].url}
+                videoDescription='A série retrata Ragnar como um fazendeiro que alcança a fama por seus ataques bem-sucedidos na Inglaterra e, mais tarde, se torna um Rei escandinavo, com o apoio de sua família e colegas guerreiros: seu irmão Rollo, seu filho Bjorn Flanco de Ferro, e suas esposas, a escudeira Lagertha e a princesa Aslaug.'
               />
-              <Carousel
-                ignoreFirstVideo
-                category={dadosIniciais[0]}
-              />
+              <Carousel ignoreFirstVideo category={dadosIniciais[0]}/>
             </div>
           )
         }
 
         return (
-          <Carousel
-            key={categoria.id}
-            category={categoria}
-          />
+          <Carousel key={categoria.id} category={categoria} />
         )
       })}
 
