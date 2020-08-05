@@ -21,7 +21,7 @@ const CadastroCategoria = () => {
           ? 'http://localhost:8080/categorias'
           : 'https://reactflix-api.herokuapp.com/categorias'
     
-        fetch(URL)
+        fetch(URL, { mode: 'no-cors' })
           .then(async (respostaDoServidor) => {
             const resposta = await respostaDoServidor.json()
             setCategories([...resposta])
