@@ -12,16 +12,17 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.2",
     "react-slick": "^0.27.1",
+    "react-spinners-css": "^1.2.2",
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run server",
+    "dev": "concurrently \"react-scripts start\" \"npm run server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"react-scripts start\" \"npm run server\"",
     "server": "node ./server.js"
   },
   "eslintConfig": {

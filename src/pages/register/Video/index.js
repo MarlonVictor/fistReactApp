@@ -26,6 +26,12 @@ function CadastroVideo() {
             })
     }, [])
 
+    function clearInputs(form) {
+        form.preventDefault()
+        const inputs = document.querySelectorAll('input')
+        inputs.forEach(input => input.value = '')
+    }
+
     return (
         <>
             <Header bg='dark'>
@@ -77,6 +83,7 @@ function CadastroVideo() {
                     />
 
                     <Button type="blue">Cadastrar</Button>
+                    <Button onClick={clearInputs}>Limpar</Button>
                 </form>
             </main>
     

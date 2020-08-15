@@ -5,7 +5,7 @@ import Footer from '../../../components/Footer'
 import FormField from '../../../components/FormField'
 import Button from '../../../components/FormButton'
 import useForm from '../../../hooks/useForm'
-import { CurrentName, Txt, CategoryList, ItenList } from './styled'
+import { CurrentName, Txt } from './styled'
 
 const CadastroCategoria = () => {
     const valoresIniciais = {
@@ -18,15 +18,27 @@ const CadastroCategoria = () => {
 
     useEffect(() => {
         const URL = window.location.hostname.includes('localhost')
-          ? 'http://localhost:8080/categorias'
-          : 'https://reactflix-api.herokuapp.com/categorias'
-    
-        fetch(URL, { mode: 'no-cors' })
+        ? 'http://localhost:8080'
+        : 'https://reactflix-api.herokuapp.com'
+
+        const myInit = { 
+            method: 'GET',
+            mode: 'cors',
+            cache: 'default' 
+        }
+
+        fetch(URL, myInit)
           .then(async (respostaDoServidor) => {
             const resposta = await respostaDoServidor.json()
             setCategories([...resposta])
           })
     }, [])
+
+    function clearInputs(form) {
+        form.preventDefault()
+        const inputs = document.querySelectorAll('input')
+        inputs.forEach(input => input.value = '')
+    }
 
 
     return (
@@ -64,17 +76,8 @@ const CadastroCategoria = () => {
                     <Txt>Após cadastrar nova categoria, vá para <Link to='/register/video'>novo video</Link> para incluir videos na categoria.</Txt>
 
                     <Button type="blue">Cadastrar</Button>
-                    <Button>Limpar</Button>
+                    <Button onClick={clearInputs}>Limpar</Button>
                 </form>
-
-                <CategoryList>
-                    <p>Categorias já existentes:</p>
-                    {categories.map(category => (
-                        <ItenList key={`${category.titulo}`}>
-                            <span></span>{category.titulo}
-                        </ItenList>
-                    ))}
-                </CategoryList>
             </main>
 
             <Footer bg='light'/>

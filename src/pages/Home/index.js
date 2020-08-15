@@ -4,7 +4,10 @@ import Footer from '../../components/Footer'
 import BannerMain from './components/BannerMain'
 import Carousel from './components/Carousel'
 import { Link } from 'react-router-dom'
+import { Ring } from 'react-spinners-css'
 import categoriasRepository from '../../repositories/categorias'
+
+import styled from 'styled-components'
 
 const Home = () => {
   const [dadosIniciais, setDadosIniciais] = useState([])
@@ -28,6 +31,15 @@ const Home = () => {
 
   const changeHeaderBackground = () => window.scrollY > 0 ? setNoHeaderBackground(false) : setNoHeaderBackground(true)
 
+  // Loading
+  const LoadingWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    margin: 300px auto 0;
+  `
+
   return (
     <>
       <Header bg={noHeaderBackground && 'light' || 'dark'}>
@@ -35,7 +47,11 @@ const Home = () => {
         <Link to='/register/video'>Novo Video</Link>
       </Header>
 
-      {dadosIniciais.length === 0 && (<aside>Loading...</aside>)}
+      {dadosIniciais.length === 0 && (
+          <LoadingWrapper>
+            <Ring color="var(--darkRed)" size={100} />
+          </LoadingWrapper>
+        )}
 
       {dadosIniciais.map((categoria, indice) => {
         if (indice === 0) {
