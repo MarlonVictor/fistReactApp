@@ -18,9 +18,13 @@ export const FooterLinks = styled.div`
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    padding: 20px 0;
 
     a {
-      margin-left: 10px;
+      margin-left: 0;
+    }
+    a:not(:first-child) {  
+      margin-left: 20px;
     }
   }
 `
@@ -30,7 +34,7 @@ export const FooterSelect = styled.select`
   padding: 15px 20px;
   border-radius: 5px;
   background-color: transparent;
-  color: var(--lightGray);
+  color: var(--fontGray);
   @media(max-width: 855px) {
     margin-top: 10px;
   }

@@ -5,16 +5,19 @@ const getStyle = type => {
         return `
             color: var(--white);
             background-color: var(--darkRed);
-            margin-top: 20px;
+            transform: translateY(-15px);
             border-radius: none;
+            font-size: 16px;
         `
     } else if(type === "blue") {
         return `
+            font-size: 14px;
             color: var(--white);
             background-color: #0d6efd;
         `
     }
     return `
+        font-size: 14px;
         color: var(--darkGray);
         background-color: #ccc;
         margin: 0 10px;
@@ -23,7 +26,6 @@ const getStyle = type => {
 
 const Button = styled.button`
     ${({ type }) => getStyle(type)}
-    font-size: 14px;
     font-weight: bold;
     border-radius: 4px;
     border: none;

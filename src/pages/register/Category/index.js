@@ -44,7 +44,7 @@ const CadastroCategoria = () => {
     return (
         <>
             <Header bg='dark'>
-                <Link to='/'>Home</Link>
+                <Link to='/home'>Home</Link>
                 <Link to='/register/video'>Novo Video</Link>
             </Header>
             

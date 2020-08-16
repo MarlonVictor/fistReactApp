@@ -35,7 +35,7 @@ function CadastroVideo() {
     return (
         <>
             <Header bg='dark'>
-                <Link to='/'>Home</Link>
+                <Link to='/home'>Home</Link>
                 <Link to='/register/category'>Nova Categoria</Link>
             </Header>
             

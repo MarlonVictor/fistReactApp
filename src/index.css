@@ -54,3 +54,7 @@ header {
 ::-webkit-scrollbar-thumb { 
   background-color: var(--lightGray); 
 }
+
+button, a {
+  outline: none;
+}

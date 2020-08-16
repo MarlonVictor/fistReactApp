@@ -22,18 +22,15 @@ const FooterComponent = ({className}) => {
 }
 
 const Footer = styled(FooterComponent)`
+  ${props => props.page == "login" && css`border-top: 1px solid var(--fontGray);`};
   margin-top: 80px;
-  background-color: var(--darkGray);
+  background-color: rgba(0,0,0,0.8);
   height: 240px;
-  color: var(--lightGray);
+  color: var(--fontGray);
   padding: 30px 250px;
   font-weight: lighter;
   font-size: 16px;
   position: relative;
-
-  &.light {
-    background-color: var(--white);
-  }
 
   @media(max-width: 855px) {
     padding: 30px 50px 40px;
@@ -41,6 +38,7 @@ const Footer = styled(FooterComponent)`
   }
   ${props => props.bg === 'light' && css`
     background-color: var(--white);
+    color: var(--lightGray);
     margin-top: 0;
   `}
 `

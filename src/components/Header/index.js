@@ -15,7 +15,7 @@ const HeaderComponent = ({children, className}) => {
 const Header = styled(HeaderComponent)`
     display: flex;
     align-items: center;
-    position: fixed;
+    position: ${props => props.position === 'top' && css`relative` || css`fixed`};
     width: 100%;
     z-index: 999;
     background: ${props => props.bg === 'dark' && css`var(--darkGray)` || css`linear-gradient(360deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%)`};
